@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  postgres:
+    image: postgres
+    container_name: local_postgresql
+    restart: always
+    environment:
+      POSTGRES_DB: indexer
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+        - 6432:5432
+    # volumes:
+    #   - ./data/postgresql:/var/lib/postgresql/data
